@@ -44,18 +44,20 @@ class ColorInput extends Component {
 
     return (
       <div>
-        <ColorPicker
-          color={value}
-          display={show}
-          positionCSS={position}
-          onChange={this.handleChange.bind(this)}
-          onClose={this.toggleVisibility.bind(this)}
-          type="chrome" />
-        <button href="#"
-         style={styles.colorInput}
-         onClick={this.toggleVisibility.bind(this)}>
+        {show &&
+          <div style={position}>
+            <ColorPicker
+              color={value}
+              onChange={this.handleChange.bind(this)}
+              onClose={this.toggleVisibility.bind(this)}
+              type="chrome"
+            />
+          </div>}
+        <button
+          style={styles.colorInput}
+          onClick={this.toggleVisibility.bind(this)}>
           <span style={[styles.color, {backgroundColor: value}]} />
-         </button>
+        </button>
       </div>
     );
   }

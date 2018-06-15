@@ -77,10 +77,9 @@ export default {
     display: 'inline-block',
     background: 'white',
     marginRight: 3,
+    padding: 0
   },
   color: {
-    marginLeft: 2,
-    marginTop: 2,
     width: 14,
     height: 14,
     display: 'inline-block',
@@ -91,8 +90,10 @@ export default {
   },
   button: {
     color: '#515151',
+    backgroundColor: 'transparent',
     textDecoration: 'none',
     display: 'block',
     padding: '2px 0',
+    border: 'none',
   }
 };
