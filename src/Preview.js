@@ -11,7 +11,8 @@ class Preview extends Component {
       'rectangle': Rect,
       'circle': Circle,
       'polygon': Path
-    }
+    },
+    svgStyle: {}
   };
 
   componentWillMount() {
@@ -19,7 +20,7 @@ class Preview extends Component {
   }
 
   render() {
-    let {width, height, objects, objectTypes} = this.props;
+    let {width, height, objects, objectTypes, svgStyle} = this.props;
 
     let style = {
       ...styles.container,
@@ -29,9 +30,9 @@ class Preview extends Component {
    };
 
    let canvas = {
-      width, 
-      height, 
-      canvasWidth: width, 
+      width,
+      height,
+      canvasWidth: width,
       canvasHeight: height
    };
 
@@ -43,7 +44,9 @@ class Preview extends Component {
           objects={objects}
           objectRefs={this.objectRefs}
           objectTypes={objectTypes}
-          canvas={canvas} />
+          canvas={canvas}
+          svgStyle={svgStyle}
+        />
       </div>
     );
   }

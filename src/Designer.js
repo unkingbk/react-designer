@@ -358,20 +358,22 @@ class Designer extends Component {
 
   renderSVG() {
     let canvas = this.getCanvas();
-    let {background, objects, objectTypes} = this.props;
+    let {background, objects, objectTypes, svgStyle} = this.props;
 
     return (
       <SVGRenderer
-         background={background}
-         width={canvas.width}
-         canvas={canvas}
-         height={canvas.height}
-         objects={objects}
-         onMouseOver={this.showHandler.bind(this)}
-         objectTypes={objectTypes}
-         objectRefs={this.objectRefs}
-         onRender={(ref) => this.svgElement = ref}
-         onMouseDown={this.newObject.bind(this)} />
+        background={background}
+        width={canvas.width}
+        canvas={canvas}
+        height={canvas.height}
+        objects={objects}
+        onMouseOver={this.showHandler.bind(this)}
+        objectTypes={objectTypes}
+        objectRefs={this.objectRefs}
+        onRender={(ref) => this.svgElement = ref}
+        onMouseDown={this.newObject.bind(this)}
+        svgStyle={svgStyle}
+      />
     );
   }
 
