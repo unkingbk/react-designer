@@ -485,6 +485,7 @@ class Designer extends Component {
     let {
       objects,
       objectTypes,
+      panelStyle,
       insertMenu: InsertMenuComponent
     } = this.props;
 
@@ -554,7 +555,8 @@ class Designer extends Component {
               object={objectWithInitial}
               onArrange={this.handleArrange.bind(this)}
               onChange={this.handleObjectChange.bind(this)}
-              objectComponent={objectComponent} />
+              objectComponent={objectComponent}
+              panelStyle={panelStyle} />
           )}
         </div>
       </HotKeys>
