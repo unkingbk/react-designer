@@ -5,8 +5,8 @@ export default ({object, startPoint, mouse}) => {
 
   return {
     ...object,
-    x: width > 0 ? objectX: objectX + width,
-    y: height > 0 ? objectY: objectY + height,
+    x: width < 0 ? (objectX + width) : objectX,
+    y: height < 0 ? (objectY + height) : objectY,
     width: Math.abs(width),
     height: Math.abs(height)
   };
