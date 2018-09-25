@@ -532,9 +532,6 @@ class Designer extends Component {
           {showHandler && (
             <Handler
               boundingBox={handler}
-              canResize={_(currentObject).has('width') ||
-                         _(currentObject).has('height')}
-              canRotate={_(currentObject).has('rotate')}
               onMouseLeave={this.hideHandler.bind(this)}
               onDoubleClick={this.showEditor.bind(this)}
               onDrag={this.startDrag.bind(this, modes.DRAG)}

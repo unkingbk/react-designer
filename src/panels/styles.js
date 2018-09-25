@@ -77,13 +77,14 @@ export default {
     display: 'inline-block',
     background: 'white',
     marginRight: 3,
-    padding: 0
+    padding: 0,
   },
   color: {
     width: 14,
     height: 14,
     display: 'inline-block',
-    borderRadius: '50%'
+    borderRadius: '50%',
+    verticalAlign: 'bottom',
   },
   empty: {
     display: 'none',
