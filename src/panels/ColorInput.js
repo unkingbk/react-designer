@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Radium from 'radium';
 import ColorPicker from 'react-color';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 import styles from './styles';
 
@@ -45,14 +46,18 @@ class ColorInput extends Component {
     return (
       <div>
         {show &&
-          <div style={position}>
-            <ColorPicker
-              color={value}
-              onChange={this.handleChange.bind(this)}
-              onClose={this.toggleVisibility.bind(this)}
-              type="chrome"
-            />
-          </div>}
+          <OutsideClickHandler
+            onOutsideClick={this.toggleVisibility.bind(this)}
+          >
+            <div style={position}>
+              <ColorPicker
+                color={value}
+                onChange={this.handleChange.bind(this)}
+                onClose={this.toggleVisibility.bind(this)}
+                type="chrome"
+              />
+            </div>
+          </OutsideClickHandler>}
         <button
           style={styles.colorInput}
           onClick={this.toggleVisibility.bind(this)}>
