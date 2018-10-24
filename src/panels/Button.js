@@ -9,7 +9,7 @@ const Button = ({onClick, ...props}) => {
     onClick(...args);
   }
   return ( // this used to be an <a/> not <button/>
-    <button href="#" style={styles.button} onClick={_onClick}>
+    <button style={styles.button} onClick={_onClick}>
       {props.children}
     </button>
   );

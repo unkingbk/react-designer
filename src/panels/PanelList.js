@@ -6,14 +6,14 @@ import styles from './styles';
 
 class PanelList extends Component {
   render() {
-    let {offset, objectComponent} = this.props;
+    let {offset, objectComponent, panelStyle} = this.props;
     let style = {
       left: offset.width + offset.x,
       top: offset.y + window.scrollY,
     };
     return (
       <Portal closeOnEsc closeOnOutsideClick isOpened={true}>
-        <div style={[styles.propertyPanel, style]}>
+        <div style={[styles.propertyPanel, style, panelStyle]}>
           {objectComponent.panels.map((Panel, i) => <Panel key={i} {...this.props} />)}
         </div>
       </Portal>
