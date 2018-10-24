@@ -22,15 +22,11 @@ export default class SizePanel extends Panel {
         </Columns>}
         <Columns label="Position">
           <Column showIf={_.has(object, 'x')}
-                  label="top" value={object.x}
+                  label="left" value={object.x}
                   onChange={this.props.onChange.bind(this, 'x')} />
           <Column showIf={_.has(object, 'y')} label="top" value={object.y}
                   onChange={this.props.onChange.bind(this, 'y')} />
         </Columns>
-        {_.has(object, 'rotate') && <Columns label="Rotation">
-          <Column label="angle" value={object.rotate}
-                  onChange={this.props.onChange.bind(this, 'rotate')} />
-        </Columns>}
       </PropertyGroup>
     );
   }
