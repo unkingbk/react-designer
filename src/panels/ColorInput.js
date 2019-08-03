@@ -17,7 +17,7 @@ class ColorInput extends Component {
       event.preventDefault();
       let rect = event.target.getBoundingClientRect();
       this.setState({
-        x: rect.left,
+        x: rect.left + 20,
         y: rect.top
       });
     }
